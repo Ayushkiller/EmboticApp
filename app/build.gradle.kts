@@ -7,14 +7,14 @@ plugins {
 
 android {
     namespace = "com.xdliverblx.embotic"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.xdliverblx.embotic"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 4
-        versionName = "1.12"
+        targetSdk = 35
+        versionCode = 5
+        versionName = "1.13"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
