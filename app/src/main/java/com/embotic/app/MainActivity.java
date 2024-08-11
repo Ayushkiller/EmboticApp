@@ -1,33 +1,46 @@
 package com.embotic.app;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class MainActivity extends Activity {
 
-    private WebView mWebView;
+    private WebView webView;
 
     @Override
-    @SuppressLint("SetJavaScriptEnabled")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mWebView = findViewById(R.id.webView); // Updated ID here
-        WebSettings webSettings = mWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        mWebView.setWebViewClient(new MyWebViewClient());
+        webView = findViewById(R.id.webView); // Updated ID here
 
-        // REMOTE RESOURCE
-        mWebView.loadUrl("https://dash.embotic.xyz");
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setDomStorageEnabled(true); // Enables DOM storage, which might be needed
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
+        webSettings.setSupportZoom(true);
+        webSettings.setBuiltInZoomControls(true);
+        webSettings.setDisplayZoomControls(false);
+        webSettings.setAllowContentAccess(true);
+        webSettings.setAllowFileAccess(true);
+
+        webView.setWebViewClient(new WebViewClient());
+        webView.setScrollBarStyle(WebView.SCROLLBARS_INSIDE_OVERLAY);
+        webView.setScrollbarFadingEnabled(false);
+        webView.setHorizontalScrollBarEnabled(false);
+        webView.setClickable(true);
+
+        // Load remote resource
+        webView.loadUrl("https://dash.embotic.xyz");
     }
 
     @Override
     public void onBackPressed() {
-        if (mWebView.canGoBack()) {
-            mWebView.goBack();
+        if (webView.canGoBack()) {
+            webView.goBack();
         } else {
             super.onBackPressed();
         }
