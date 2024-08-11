@@ -1,5 +1,7 @@
-apply plugin: 'com.android.application'
-apply plugin: 'org.jetbrains.kotlin.android' // Apply the Kotlin plugin
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
 
 android {
     compileSdkVersion 34
@@ -33,6 +35,6 @@ dependencies {
 }
 
 repositories {
-    mavenCentral()
     google()
+    mavenCentral()
 }
