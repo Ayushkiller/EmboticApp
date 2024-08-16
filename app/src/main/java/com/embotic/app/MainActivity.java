@@ -1,4 +1,4 @@
-package com.embotic.app;
+package com.EHAX.app;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
         webView.setClickable(true);
 
         // Load remote resource
-        webView.loadUrl("https://dash.embotic.xyz");
+        webView.loadUrl("http://ehax.tech/register");
     }
 
     @Override
