@@ -6,6 +6,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.EHAX.app.R;
+
 public class MainActivity extends Activity {
 
     private WebView webView;
