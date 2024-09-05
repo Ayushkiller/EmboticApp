@@ -9,7 +9,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
-import com.EHAX.app.R;
+
 
 public class MainActivity extends Activity {
 
