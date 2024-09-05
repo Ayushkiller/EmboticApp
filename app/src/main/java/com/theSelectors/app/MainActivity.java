@@ -9,13 +9,10 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
-
-
 public class MainActivity extends Activity {
 
     private WebView webView;
     private static final String DASH_URL = "http://192.168.3.13:3000/login";
-    private static final String PANEL_URL = "https://192.168.3.13:3000";
     private static final String PREFERENCES_NAME = "theSelectorsAppPreferences";
     private static final String KEY_LAST_URL = "lastUrl";
 
@@ -37,7 +34,9 @@ public class MainActivity extends Activity {
         webSettings.setAllowContentAccess(true);
         webSettings.setAllowFileAccess(true);
 
+        // Set a custom WebViewClient without SSL handling
         webView.setWebViewClient(new WebViewClient());
+
         webView.setScrollBarStyle(WebView.SCROLLBARS_INSIDE_OVERLAY);
         webView.setScrollbarFadingEnabled(false);
         webView.setHorizontalScrollBarEnabled(false);
@@ -48,22 +47,13 @@ public class MainActivity extends Activity {
         String lastUrl = prefs.getString(KEY_LAST_URL, DASH_URL);
         webView.loadUrl(lastUrl);
 
-        // Set up button listeners to switch URLs
+        // Set up button listener to switch URL
         Button btnDash = findViewById(R.id.btnDash);
         btnDash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 webView.loadUrl(DASH_URL);
                 saveLastUrl(DASH_URL);
-            }
-        });
-
-        Button btnPanel = findViewById(R.id.btnPanel);
-        btnPanel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                webView.loadUrl(PANEL_URL);
-                saveLastUrl(PANEL_URL);
             }
         });
     }
