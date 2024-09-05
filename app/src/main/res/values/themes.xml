@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Embotic" parent="Theme.AppCompat.DayNight">
+    <style name="Base.Theme.theSelectors" parent="Theme.AppCompat.DayNight">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
     </style>
 
-    <style name="Theme.Embotic" parent="Base.Theme.Embotic" />
+    <style name="Theme.theSelectors" parent="Base.Theme.theSelectors" />
 </resources>

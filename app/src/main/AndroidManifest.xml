@@ -10,7 +10,7 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:configChanges="orientation|screenSize"
-            android:name="com.embotic.app.MainActivity"
+            android:name="com.theSelectors.app.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

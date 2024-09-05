@@ -1,4 +1,4 @@
-package com.embotic.app;
+package com.theSelectors.app;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
     private WebView webView;
     private static final String DASH_URL = "http://192.168.3.13:3000/login";
     private static final String PANEL_URL = "https://192.168.3.13:3000";
-    private static final String PREFERENCES_NAME = "EmboticAppPreferences";
+    private static final String PREFERENCES_NAME = "theSelectorsAppPreferences";
     private static final String KEY_LAST_URL = "lastUrl";
 
     @Override

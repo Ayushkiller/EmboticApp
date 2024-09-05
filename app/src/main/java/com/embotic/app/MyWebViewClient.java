@@ -1,4 +1,4 @@
-package com.embotic.app;
+package com.theSelectors.app;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,7 +12,7 @@ class MyWebViewClient extends WebViewClient {
         String hostname;
 
         // YOUR HOSTNAME
-        hostname = "dash.embotic.xyz";
+        hostname = "dash.theSelectors.xyz";
 
         Uri uri = Uri.parse(url);
         if (url.startsWith("file:") || uri.getHost() != null && uri.getHost().endsWith(hostname)) {
