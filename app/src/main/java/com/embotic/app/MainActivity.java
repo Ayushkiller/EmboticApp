@@ -14,8 +14,8 @@ import com.EHAX.app.R;
 public class MainActivity extends Activity {
 
     private WebView webView;
-    private static final String DASH_URL = "https://dash.embotic.xyz";
-    private static final String PANEL_URL = "https://panel.embotic.xyz";
+    private static final String DASH_URL = "http://192.168.3.13:3000/login";
+    private static final String PANEL_URL = "https://192.168.3.13:3000";
     private static final String PREFERENCES_NAME = "EmboticAppPreferences";
     private static final String KEY_LAST_URL = "lastUrl";
 
